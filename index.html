@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    
+    <h1 class="h" class="animate__animated animate__bounce">Grade.it</h1>
+
+    <p class="para">This grading system helps to grade scores</p>
+
+    <div class="system">
+        <input type="number" placeholder="Enter score" id="gradeInput">
+
+        <button class="checkGrade" onclick="checkGrade()">Check</button>
+
+        <main id="gradeShow"></main>
+
+        <div id="result">Grade displays here</div>
+    </div>
+
+
+
+</body>
+
+<script>
+    function checkGrade() {
+        const input = Number(gradeInput.value)
+
+        if (input <= 44) {
+            var grade = "F: Failed"
+            result.innerHTML = grade
+        }
+        else if(input >= 45 && input <= 49){
+            var grade = "D: Pass"
+            result.innerHTML = grade
+        }
+        else if(input >= 50 && input <= 59){
+            var grade = "C: Good!"
+            result.innerHTML = grade
+        }
+        else if(input >= 60 && input <= 69){
+            var grade = "B: Very Good!"
+            result.innerHTML = grade
+        }
+        else if(input >= 70 && input <= 100){
+            var grade = "A: Excellent"
+            result.innerHTML = grade
+        }
+    }
+</script>
+
+</html>
