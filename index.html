@@ -14,7 +14,7 @@
     
     <h1 class="h" class="animate__animated animate__bounce">Grade.it</h1>
 
-    <p class="para">This grading system helps to grade scores</p>
+    <p class="para">This web app calculates grade</p>
 
     <div class="system">
         <input type="number" placeholder="Enter score" id="gradeInput">
@@ -27,15 +27,15 @@
     </div>
 
 
-
 </body>
 
 <script>
+
     function checkGrade() {
         const input = Number(gradeInput.value)
 
         if (input <= 44) {
-            var grade = "F: Failed"
+            var grade = "F: Failed!"
             result.innerHTML = grade
         }
         else if(input >= 45 && input <= 49){
